@@ -1,0 +1,15 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+
+# Local backup exports (user-generated, shouldn't be committed)
+backups/*.json
+
+# Node (only relevant if any tooling is added later)
+node_modules/
+npm-debug.log
