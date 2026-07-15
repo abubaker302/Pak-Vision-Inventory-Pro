@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Pak Vision Inventory Pro</title>
+<meta name="description" content="Offline-first inventory & sales management system for wholesalers and retailers.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Font Awesome (icons) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- App styles -->
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="appLoadingScreen">
+  <div class="stitch-logo">Pak Vision Inventory Pro</div>
+  <div class="stitch-line"></div>
+</div>
+
+<div id="toastContainer"></div>
+
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__brand">
+      <img id="brandLogo" style="display:none;" alt="Shop Logo">
+      <div class="brand-mark" id="brandMark">PV</div>
+      <div>
+        <div class="sidebar__brand-name" id="brandShopName">Pak Vision Traders</div>
+        <div class="sidebar__brand-tag">Inventory Pro</div>
+      </div>
+    </div>
+    <nav class="sidebar-nav" id="sidebarNav"></nav>
+    <div class="sidebar__footer">
+      v1.0 &middot; Offline System<br>&copy; Pak Vision Technologies
+    </div>
+  </aside>
+
+  <div class="main-col">
+    <header class="topbar">
+      <div class="topbar__left">
+        <button class="sidebar-toggle" id="sidebarToggle"><i class="fa-solid fa-bars"></i></button>
+        <h1 id="pageTitle">Dashboard</h1>
+      </div>
+      <div class="topbar__right">
+        <button class="icon-round-btn" id="themeToggle" title="Toggle theme"><i class="fa-solid fa-sun"></i></button>
+      </div>
+    </header>
+
+    <main class="view-wrap">
+      <div id="view"></div>
+    </main>
+  </div>
+</div>
+
+<!-- ============ Third-party libraries (CDN) ============ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.1/jspdf.plugin.autotable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+<!-- ============ App modules (order matters: db/utils first) ============ -->
+<script src="assets/js/db.js"></script>
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/products.js"></script>
+<script src="assets/js/customers.js"></script>
+<script src="assets/js/suppliers.js"></script>
+<script src="assets/js/sales.js"></script>
+<script src="assets/js/purchases.js"></script>
+<script src="assets/js/expenses.js"></script>
+<script src="assets/js/invoice.js"></script>
+<script src="assets/js/reports.js"></script>
+<script src="assets/js/dashboard.js"></script>
+<script src="assets/js/settings.js"></script>
+<script src="assets/js/backup.js"></script>
+<script src="assets/js/app.js"></script>
+
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const loader = document.getElementById('appLoadingScreen');
+      if (loader) { loader.style.opacity = '0'; setTimeout(() => loader.remove(), 400); }
+    }, 350);
+  });
+</script>
+
+</body>
+</html>
