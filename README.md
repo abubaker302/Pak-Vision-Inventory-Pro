@@ -9,7 +9,7 @@ No backend. No database server. No monthly fees. Your data stays entirely in you
 ## 🔗 Live Demo
 
 > Once GitHub Pages is enabled for this repo, your live link will be:
-> **`https://YOUR_USERNAME.github.io/pak-vision-inventory-pro/`**
+> **`https://abubaker302.github.io/Pak-Vision-Inventory-Pro/`**
 
 ---
 
